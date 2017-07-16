@@ -1,0 +1,59 @@
+@import "../base/reset.less";
+@import "../utils/decorators";
+
+
+.files-list {
+
+  .item {
+    &:extend(.overflow-ellipsis);
+    padding: 0 10px;
+    -webkit-user-select: none;
+    cursor: pointer;
+    height: 25px;
+    line-height: 25px;
+
+    * {
+      line-height: 25px;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      background: @background-menu--hover;
+    }
+
+    &.selected {
+      background: @blue;
+      color: #fff;
+    }
+
+    &.file {
+      padding-left: 20px;
+    }
+
+    i {
+      margin-right: 3px;
+    }
+
+    i.dirty {
+      margin-left: @margin-icon;
+      margin-top: -2px; // center on the line a bit
+      font-size: 9px;
+    }
+
+    .btn {
+      border: none;
+      background: none;
+      visibility: hidden;
+    }
+
+    &:hover .btn {
+      visibility: visible;
+    }
+
+    &.selected i.dirty,
+    &.selected .btn {
+      visibility: visible;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "dat-editor",
+  "version": "1.0.0",
+  "description": "A simple but well-featured code editor",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run js && npm run css",
+    "js": "browserify index.js > index.bundle.js",
+    "css": "lessc css/index.less css/index.css",
+    "lint": "eslint --fix --ignore-pattern 'node_modules' --ignore-pattern '*.build.js' .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserify": {
+    "transform": ["rollupify"]
+  },
+  "keywords": [
+    "dat",
+    "editor"
+  ],
+  "author": "Paul Frazee <pfrazee@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "less": "^2.7.2",
+    "mime": "^1.3.6",
+    "moment": "^2.18.1",
+    "pretty-bytes": "^4.0.2",
+    "yo-yo": "^1.4.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "eslint": "^4.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "rollup": "^0.45.2",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollupify": "^0.4.0"
+  }
+}

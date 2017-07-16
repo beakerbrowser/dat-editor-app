@@ -1,0 +1,6 @@
+{
+  "url": "dat://f20cedb0ecbc2fe432336e7df0304646954e01599e3488fb0360117800d6d3ff/",
+  "title": "Dat Editor",
+  "description": "A simple but well-featured code editor",
+  "fallback_page": "index.html"
+}
